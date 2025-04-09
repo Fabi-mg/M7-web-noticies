@@ -19,4 +19,9 @@ class themes extends Model
             'publicationDate' => 'datetime',
         ];
     }
+
+    public function news()
+    {
+        return $this->hasMany(news::class);
+    }
 }
