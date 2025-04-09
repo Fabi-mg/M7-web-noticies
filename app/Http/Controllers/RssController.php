@@ -10,14 +10,18 @@ class RssController extends Controller
 
     public function getRss()
     {
-
         $rssContent = file_get_contents($this::RSS_URL);
 
         if ($rssContent === false) {
             return response()->json(['error' => 'No se pudo obtener el RSS'], 500);
         }
 
-        return response($rssContent, 200)
-            ->header('Content-Type', 'application/xml');
+        $rssXml = simplexml_load_string($rssContent, 'SimpleXMLElement', LIBXML_NOCDATA);
+
+        if ($rssXml === false) {
+            return response()->json(['error' => 'No se pudo obtener el XML'], 500);
+        }
+
+        return $rssXml;
     }
 }

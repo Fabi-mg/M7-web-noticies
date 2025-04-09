@@ -9,10 +9,10 @@ return new class extends Migration {
     {
         Schema::create('themes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->integer('traffic');
-            $table->string('imageUrl');
             $table->dateTime('publicationDate');
+            $table->string('imageUrl');
             $table->timestamps();
         });
     }
