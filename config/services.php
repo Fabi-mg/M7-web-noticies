@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'wordpress' => [
+        'url' => env('WP_API_URL'),
+        'username' => env('WP_API_USER'),
+        'password' => env('WP_API_PASS'),
+    ],
+
+    'google_api' => [
+        'key' => env('GOOGLE_API_KEY'),
+    ],
 ];

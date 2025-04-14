@@ -1,4 +1,8 @@
-# WEB-NOTICIES
+# WEB-
+
+## 03-WordpressConnection
+
+### 14/04/2025: Be able to pass a prompt to Gemini and have it automatically publish news
 
 ## 02-CreateNewsCommand
 

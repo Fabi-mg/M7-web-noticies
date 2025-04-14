@@ -11,6 +11,7 @@ class themes extends Model
         'traffic',
         'imageUrl',
         'publicationDate',
+        'published',
     ];
 
     protected function casts()
