@@ -13,6 +13,7 @@ return new class extends Migration {
             $table->integer('traffic');
             $table->dateTime('publicationDate');
             $table->string('imageUrl');
+            $table->boolean('published')->default(false);
             $table->timestamps();
         });
     }
